@@ -1,6 +1,6 @@
 # Vim config
 
-My .vimrc configuration.
+My ```.vimrc``` configuration.
 
 ## Installation 
 
