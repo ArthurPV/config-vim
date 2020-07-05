@@ -71,7 +71,6 @@ set nu
 set encoding=UTF-8
 set modifiable 
 set nocompatible
-" set cursorline
 filetype on
 set tabstop=4
 set laststatus=2
