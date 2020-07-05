@@ -2,7 +2,7 @@
 
 ## Installation 
 
-To begin enter the following command on your terminal.
+To start enter the following command on your terminal.
 
 ```
 git clone https://github.com/ArthurPV/config-vim.git ~/
@@ -16,13 +16,13 @@ mv .vimrc ~/
 ```
 ### Install Vundle.vim
 
-Check if you have the ```.vim``` folder.
+Make sure that you have the ```.vim``` folder.
 ```bash
 find .vim
 ```
 
 
-If you don't have a ```.vim``` folder create it.
+If you don't create one by typing.
 ```bash
 mkdir ~/.vim
 ```
@@ -31,10 +31,9 @@ Then follow the [Vundle.vim](https://github.com/VundleVim/Vundle.vim) documentat
 
 ### Install vim plugins
 
-After installing Vundle.vim install the vim plugins. Start vim by entering vim on your terminal.
+After installing Vundle.vim install the vim plugins. Start vim by simply entering vim on your terminal.
 
-On the vim config I create a shortcut to install its packages more quickly execute: F7.
-But normally you have to type :PluginInstall on vim.
+You can then type :PluginInstall on vim or if you want to speed up the installation simply type F7.
 
 ### Install coc.nvim
 
