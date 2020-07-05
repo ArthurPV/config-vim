@@ -43,3 +43,5 @@ Follow the [coc.nvim](https://github.com/neoclide/coc.nvim) documentation
 And that's it!
 
 ### Screenshot
+
+![screenshot vim](/Screenshot_2020-07-05_15-44-45.png)
