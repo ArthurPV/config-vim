@@ -10,7 +10,9 @@ To start, enter the following command on your terminal:
 git clone https://github.com/ArthurPV/vim-config.git
 ```
 
+Access the file you just downloaded.
 Move the .vimrc with the following command:
+
 ```bash
 mv .vimrc ~/
 ```
