@@ -16,4 +16,13 @@ mv .vimrc ~/
 ```
 ### Install Vundle.vim
 
-Check if you have the ```.vim``` file.
+Check if you have the ```.vim``` folder.
+```bash
+find .vim
+```
+
+
+If you don't have a ```.vim``` folder create it.
+```bash
+mkdir ~/.vim
+```
