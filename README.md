@@ -7,7 +7,7 @@ My ```.vimrc``` configuration.
 To start, enter the following command on your terminal:
 
 ```
-git clone https://github.com/ArthurPV/config-vim.git ~/
+git clone https://github.com/ArthurPV/vim-config.git ~/
 ```
 
 Then, access the folder with the following command:
@@ -20,7 +20,7 @@ mv .vimrc ~/
 
 Make sure that you have the ```.vim``` folder.
 ```bash
-find .vim
+find ~/.vim
 ```
 
 
