@@ -39,3 +39,7 @@ But normally you have to type :PluginInstall on vim.
 ### Install coc.nvim
 
 Follow the [coc.nvim](https://github.com/neoclide/coc.nvim) documentation
+
+And that's it!
+
+### Screenshot
