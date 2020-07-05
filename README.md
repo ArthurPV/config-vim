@@ -1,5 +1,7 @@
 # Vim config
 
+My .vimrc configuration.
+
 ## Installation 
 
 To start, enter the following command on your terminal:
