@@ -11,6 +11,9 @@ git clone https://github.com/ArthurPV/config-vim.git ~/
 After doing that access the folder with the following command.
 ```bash
 cd 
-cd config-vim
+cd vim-config
 mv .vimrc ~/
 ```
+### Install Vundle.vim
+
+Check if you have the ```.vim``` file.
