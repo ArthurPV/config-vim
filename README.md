@@ -7,7 +7,7 @@ My ```.vimrc``` configuration.
 To start, enter the following command on your terminal:
 
 ```
-git clone https://github.com/ArthurPV/vim-config.git ~/
+git clone https://github.com/ArthurPV/vim-config.git
 ```
 
 Then, access the folder with the following command:
