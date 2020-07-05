@@ -1,2 +1,3 @@
-# config-vim
-Config for Vim
+# Config Vim
+
+## Installation 
