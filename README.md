@@ -26,3 +26,5 @@ If you don't have a ```.vim``` folder create it.
 ```bash
 mkdir ~/.vim
 ```
+
+Then follow the [Vundle.vim](https://github.com/VundleVim/Vundle.vim) documentation to install it.
