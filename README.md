@@ -2,13 +2,13 @@
 
 ## Installation 
 
-To start enter the following command on your terminal.
+To start, enter the following command on your terminal:
 
 ```
 git clone https://github.com/ArthurPV/config-vim.git ~/
 ```
 
-After doing that access the folder with the following command.
+Then, access the folder with the following command:
 ```bash
 cd 
 cd vim-config
@@ -22,12 +22,12 @@ find .vim
 ```
 
 
-If you don't create one by typing.
+If you don't, create one by typing.
 ```bash
 mkdir ~/.vim
 ```
 
-Then follow the [Vundle.vim](https://github.com/VundleVim/Vundle.vim) documentation to install it.
+Follow the [Vundle.vim](https://github.com/VundleVim/Vundle.vim) documentation to install it.
 
 ### Install vim plugins
 
