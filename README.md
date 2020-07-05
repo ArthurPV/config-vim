@@ -35,7 +35,7 @@ Follow the [Vundle.vim](https://github.com/VundleVim/Vundle.vim) documentation t
 
 After installing Vundle.vim install the vim plugins. Start vim by simply entering vim on your terminal.
 
-You can then type :PluginInstall on vim or if you want to speed up the installation simply type F7.
+You can then type :PluginInstall on vim or if you want to speed up the installation simply type <F7>.
 
 ### Install coc.nvim
 
