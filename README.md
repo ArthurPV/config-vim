@@ -35,3 +35,7 @@ After installing Vundle.vim install the vim plugins. Start vim by entering vim o
 
 On the vim config I create a shortcut to install its packages more quickly execute: F7.
 But normally you have to type :PluginInstall on vim.
+
+### Install coc.nvim
+
+Follow the [coc.nvim](https://github.com/neoclide/coc.nvim) documentation
