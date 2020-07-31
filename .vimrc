@@ -392,3 +392,8 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
+
+" --------------------------
+" Tagbar
+" For Linux and require ctags package
+let g:tagbar_ctags_bin = '/bin/ctags'
