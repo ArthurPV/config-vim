@@ -395,5 +395,5 @@ let g:lightline = {
 
 " --------------------------
 " Tagbar
-" For Linux and require ctags package
+" For Linux that requires ctags package
 let g:tagbar_ctags_bin = '/bin/ctags'
