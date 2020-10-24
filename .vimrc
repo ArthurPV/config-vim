@@ -6,9 +6,21 @@ Plugin 'raichoo/purescript-vim'
 
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'itchyny/lightline.vim'
+Plugin 'tmux-plugins/vim-tmux'
+
+" Plugin 'itchyny/lightline.vim'
+
+Plugin 'ryanoasis/vim-devicons'
+
+"Plugin 'sjl/gundo.vim'
+
+"Plugin 'vim-airline/vim-airline'
+
+"Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'justinmk/vim-syntax-extra'
+
+Plugin 'liuchengxu/vista.vim'
 
 Plugin 'tpope/vim-fugitive'
 
@@ -28,7 +40,7 @@ Plugin 'hail2u/vim-css3-syntax'
 
 Plugin 'ap/vim-css-color'
 
-Plugin 'fatih/vim-go'
+"Plugin 'fatih/vim-go'
 
 Plugin 'nikvdp/ejs-syntax'
 
@@ -38,7 +50,7 @@ Plugin 'rust-lang/rust.vim'
 
 Plugin 'c.vim'
 
-Plugin 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 
 Plugin 'vim-ruby/vim-ruby'
 
@@ -77,11 +89,12 @@ set laststatus=2
 set shiftwidth=4
 filetype plugin on
 filetype indent on
+set mouse=a
 colorscheme mooncolor
 set background=dark
 
 " Commands for normal mode
-nmap <F8> :TagbarToggle<CR>
+nmap <F8> :Vista<CR>
 nmap <F6> :NERDTreeToggle<CR>
 nmap <F7> :PluginInstall<CR>
 nmap <C-n> :bn<CR>
@@ -170,7 +183,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_theme = 'onedark'
+let g:airline_theme = 'papercolor'
 let g:airline_powerline_fonts = 1
 
 " ------------------------------------------
@@ -198,7 +211,7 @@ let g:purescript_indent_dot = v:true
 
 " ------------------------------------------
 " Setting for bracket highlight
-hi MatchParen ctermbg=blue guibg=orange term=none cterm=none gui=bold
+"hi MatchParen ctermbg=blue guibg=orange term=none cterm=none gui=bold
 " -----------------------------------------
 " Setting for search word
 set incsearch
@@ -212,7 +225,7 @@ augroup END
 let g:lexical#spell = 1
 " Settin for line number
 set numberwidth=1
-set cursorline
+"set cursorline
 
 " ------------------------------------------
 " condition nvim
@@ -356,7 +369,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings using CoCList:
 " Show all diagnostics.
@@ -378,22 +391,131 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " --------------------------
 " Bakcground line number
-highlight LineNr guibg=#353131
+"highlight LineNr guibg=#353131
 
 " --------------------------
 " Configurate lightline
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
+"let g:lightline = {
+"      \ 'colorscheme': 'one',
+"      \ 'active': {
+"      \   'left': [ [ 'mode', 'paste' ],
+"      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+"      \ },
+"      \ 'component_function': {
+"      \   'gitbranch': 'FugitiveHead'
+"      \ },
+"      \ }
 
 " --------------------------
 " Tagbar
 " For Linux that requires ctags package
-let g:tagbar_ctags_bin = '/bin/ctags'
+"let g:tagbar_ctags_bin = '/bin/ctags'
+
+let g:currentmode={
+      \ 'n'  : 'Normal ',
+      \ 'no' : 'N·Operator Pending ',
+      \ 'v'  : 'Visual ',
+      \ 'V'  : 'V·Line ',
+      \ '' : 'V·Block ',
+      \ 's'  : 'Select ',
+      \ 'S'  : 'S·Line ',
+      \ '' : 'S·Block ',
+      \ 'i'  : 'Insert ',
+      \ 'R'  : 'REPLACE ',
+      \ 'Rv' : 'V·Replace ',
+      \ 'c'  : 'Command ',
+      \ 'cv' : 'Vim Ex ',
+      \ 'ce' : 'Ex ',
+      \ 'r'  : 'Prompt ',
+      \ 'rm' : 'More ',
+      \ 'r?' : 'Confirm ',
+      \ '!'  : 'Shell ',
+      \ 't'  : 'Terminal '
+      \}
+
+
+highlight User1 cterm=None gui=None ctermfg=007 guifg=fgcolor
+highlight User2 cterm=None gui=None ctermfg=008 guifg=bgcolor
+highlight User3 cterm=None gui=None ctermfg=008 guifg=bgcolor
+highlight User4 cterm=None gui=None ctermfg=008 guifg=bgcolor
+highlight User5 cterm=None gui=None ctermfg=008 guifg=bgcolor
+highlight User7 cterm=None gui=None ctermfg=008 guifg=bgcolor
+highlight User8 cterm=None gui=None ctermfg=008 guifg=bgcolor
+highlight User9 cterm=None gui=None ctermfg=007 guifg=fgcolor
+
+" Automatically change the statusline color depending on mode
+function! ChangeStatuslineColor()
+  if (mode() =~# '\v(n|no)')
+    exe 'hi! StatusLine ctermfg=008 guifg=#d5ddd8 guibg=#4d596d gui=None cterm=None'
+ " elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block' || get(g:currentmode, mode(), '') ==# 't')
+  "  exe 'hi! StatusLine ctermfg=005 guifg=#d5ddd8 guibg=#4d596d gui=None cterm=None'
+  elseif (mode() ==# 'v' || '' || 'V')
+	  exe 'hi! StatusLine ctermfg=008 guifg=#d5ddd8 guibg=#4d596d gui=None cterm=None'
+  elseif (mode() ==# 'n') 
+	  exe 'hi! StatusLine ctermbg=005 guifg=#d5ddd8 guibg=#4d596d gui=None cterm=None'
+  elseif (mode() ==# 'i')
+    exe 'hi! StatusLine ctermfg=004 guifg=#d5ddd8 gui=None guibg=#4d596d cterm=None'
+  elseif (mode() ==# 'R') 
+	  exe 'hi! StatusLine ctermfg=004 guifg=#d5ddd8 gui=None guibg=#4d596d cterm=None'
+  else
+    exe 'hi! StatusLine ctermfg=006 guifg=#d5ddd8 gui=None cterm=None'
+  endif
+
+  return ''
+endfunction
+
+" Find out current buffer's size and output it.
+function! FileSize()
+  let bytes = getfsize(expand('%:p'))
+  if (bytes >= 1024)
+    let kbytes = bytes / 1024
+  endif
+  if (exists('kbytes') && kbytes >= 1000)
+    let mbytes = kbytes / 1000
+  endif
+
+  if bytes <= 0
+    return '0'
+  endif
+
+  if (exists('mbytes'))
+    return mbytes . 'MB '
+  elseif (exists('kbytes'))
+    return kbytes . 'KB '
+  else
+    return bytes . 'B '
+  endif
+endfunction
+
+function! ReadOnly()
+  if &readonly || !&modifiable
+    return ''
+  else
+    return ''
+endif
+endfunction
+
+function! GitInfo()
+  let git = fugitive#head()
+  if git != ''
+    return ' '.fugitive#head()
+  else
+    return ''
+endif
+endfunction
+
+" http://stackoverflow.com/a/10416234/213124
+set laststatus=2
+set statusline=
+set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
+set statusline+=%0*\ %{toupper(g:currentmode[mode()])}   " Current mode
+set statusline+=%8*\ [%n]                                " buffernr
+set statusline+=%8*\ %{GitInfo()}                        " Git Branch name
+set statusline+=%8*\ %<%F\ %{ReadOnly()}\ %m\ %w\        " File+path
+set statusline+=%#warningmsg#
+set statusline+=%*
+set statusline+=%9*\ %=                                  " Space
+set statusline+=%8*\ %y\                                 " FileType
+set statusline+=%7*\ %{(&fenc!=''?&fenc:&enc)}\[%{&ff}]\  " Encoding & Fileformat
+set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
+set statusline+=%0*\ %3p%%\ \ %l:\ %3c\                 " Rownumber/total (%)
