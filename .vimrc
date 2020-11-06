@@ -95,21 +95,21 @@ autocmd FileType cpp map <buffer> <C-q>c :w<CR>:exec '!g++' shellescape(@%, 1)<C
 
 let s:colors = {
   \ 'brown'       : "905532",
-  \ 'aqua'        : "3AFFDB",
-  \ 'blue'        : "689FB6",
-  \ 'darkBlue'    : "44788E",
-  \ 'purple'      : "834F79",
-  \ 'lightPurple' : "834F79",
-  \ 'red'         : "AE403F",
-  \ 'beige'       : "F5C06F",
-  \ 'yellow'      : "F09F17",
-  \ 'orange'      : "D4843E",
-  \ 'darkOrange'  : "F16529",
-  \ 'pink'        : "CB6F6F",
-  \ 'salmon'      : "EE6E73",
-  \ 'green'       : "8FAA54",
-  \ 'lightGreen'  : "31B53E",
-  \ 'white'       : "FFFFFF"
+  \ 'aqua'        : "63c7dd",
+  \ 'blue'        : "527a9a",
+  \ 'darkBlue'    : "0a0672",
+  \ 'purple'      : "887893",
+  \ 'lightPurple' : "d3badd",
+  \ 'red'         : "d15151",
+  \ 'beige'       : "efe3ce",
+  \ 'yellow'      : "b39f11",
+  \ 'orange'      : "eab654",
+  \ 'darkOrange'  : "ae6b3e",
+  \ 'pink'        : "dc9be8",
+  \ 'salmon'      : "ffc796",
+  \ 'green'       : "8fac74",
+  \ 'lightGreen'  : "9fbf97",
+  \ 'white'       : "d8d8d8"
   \ }
 
 " Status Line
