@@ -53,6 +53,7 @@ Plug 'scrooloose/nerdtree'
 
 " Syntax highlighting for nerdtree + vim-devicons
 Plug 'vwxyutarooo/nerdtree-devicons-syntax'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 call plug#end()
 
