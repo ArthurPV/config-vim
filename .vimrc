@@ -83,6 +83,7 @@ nmap <C-p> :bp<CR>
 nmap <C-c> :bd<CR>
 nmap <space>f :Ack<CR>
 nmap <space>c :Clap filer<CR>
+nmap <C-f> :FZF<CR>
 
 " Command (run code)
 
