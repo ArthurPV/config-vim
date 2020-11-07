@@ -29,13 +29,13 @@ If you don't, create one by typing.
 mkdir ~/.vim
 ```
 
-Follow the [Vundle.vim](https://github.com/VundleVim/Vundle.vim) documentation to install it.
+Follow the [vim-plug](https://github.com/junegunn/vim-plug) documentation to install it.
 
 ### Install vim plugins
 
-After installing Vundle.vim install the vim plugins. Start vim by simply entering vim on your terminal.
+After installing vim-plug install the vim plugins. Start vim by simply entering vim on your terminal.
 
-You can then type :PluginInstall on vim or if you want to speed up the installation simply type F7.
+You can then type :PlugInstall on vim or if you want to speed up the installation simply type space + u.
 
 ### Install coc.nvim
 
