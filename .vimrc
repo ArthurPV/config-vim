@@ -24,9 +24,6 @@ Plug 'sheerun/vim-polyglot'
 " Add file type icons to Vim plugins such as: NERDTree...
 Plug 'ryanoasis/vim-devicons'
 
-" :clap: Modern performant generic finder and dispatcher for Vim and NeoVim
-Plug 'liuchengxu/vim-clap'
-
 " Enhanced multi-line search for Vim
 Plug 'wincent/ferret'
 
@@ -66,9 +63,9 @@ set nu
 set encoding=UTF-8
 set modifiable
 filetype on
-set tabstop=4
+set tabstop=2
 set laststatus=2
-set shiftwidth=4
+set shiftwidth=2
 filetype plugin on
 set mouse=a
 colorscheme mooncolor
@@ -83,15 +80,26 @@ nmap <C-n> :bn<CR>
 nmap <C-p> :bp<CR>
 nmap <C-c> :bd<CR>
 nmap <space>f :Ack<CR>
-nmap <space>c :Clap filer<CR>
 nmap <C-f> :FZF<CR>
 
-" Command (run code)
+" Command (run or build)
 
-autocmd FileType python map <buffer> <C-q>p :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-autocmd FileType javascript map <buffer> <C-q>j :w<CR>:exec '!node' shellescape(@%, 1)<CR>
-autocmd FileType elixir map <buffer> <C-q>e :w<CR>:exec '!elixir' shellescape(@%, 1)<CR>
-autocmd FileType cpp map <buffer> <C-q>c :w<CR>:exec '!g++' shellescape(@%, 1)<CR>
+" c++
+nnoremap <C-q>+ :!g++ -o  %:r % -std=c++17<Enter>
+nnoremap <C-q>+r :!./%:r
+
+" rust
+nnoremap <C-q>r :!rustc -o %:r %<Enter>
+nnoremap <C-q>rr :!./%:r
+
+" python
+nnoremap <C-q>p :!python %:r.py %<Enter>
+
+" js (node)
+nnoremap <C-q>j :!node %:r.js %<Enter>
+
+" elixir
+nnoremap <C-q>e :!elixir %:r.ex %<Enter>
 
 " Syntax highlighting for vim-devicons
 
