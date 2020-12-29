@@ -73,13 +73,12 @@ set background=dark
 
 " Command
 
-nmap <space>v :Vista<CR>
-nmap <space>b :NERDTreeToggle<CR>
-nmap <space>u :PlugInstall<CR>
+nmap <C-v> :Vista<CR>
+nmap <C-b> :NERDTreeToggle<CR>
+nmap <C-i> :PlugInstall<CR>
 nmap <C-n> :bn<CR>
 nmap <C-p> :bp<CR>
 nmap <C-c> :bd<CR>
-nmap <space>f :Ack<CR>
 nmap <C-f> :FZF<CR>
 
 " Command (run or build)
