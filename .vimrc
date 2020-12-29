@@ -91,6 +91,9 @@ nnoremap <C-q>+r :!./%:r
 nnoremap <C-q>r :!rustc -o %:r %<Enter>
 nnoremap <C-q>rr :!./%:r
 
+" cargo
+nnoremap <C-q>rc :!cargo run
+
 " python
 nnoremap <C-q>p :!python %:r.py %<Enter>
 
