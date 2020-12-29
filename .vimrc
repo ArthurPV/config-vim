@@ -209,7 +209,6 @@ function! GitInfo()
 endif
 endfunction
 
-" http://stackoverflow.com/a/10416234/213124
 set laststatus=2
 set statusline=
 set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
